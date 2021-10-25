@@ -1,0 +1,13 @@
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        &.theme--#{$theme} {
+            @each $map, $submap in $map {
+                @each $key, $value in $submap {
+                    --#{$map}-#{$key}: #{$value};
+                }
+            }
+
+            @content;
+        }
+    }
+}

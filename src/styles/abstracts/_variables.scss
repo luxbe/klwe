@@ -1,0 +1,64 @@
+$colors: (
+    white: hsl(0, 0%, 100%),
+    grey-1: hsl(225, 10%, 95%),
+    grey-2: hsl(225, 15%, 85%),
+    grey-3: hsl(225, 15%, 75%),
+    grey-4: hsl(225, 20%, 60%),
+    grey-5: hsl(225, 20%, 30%),
+    grey-6: hsl(225, 20%, 20%),
+    grey-7: hsl(225, 20%, 15%),
+    black: hsl(225, 20%, 10%),
+    red: hsl(0, 80%, 65%),
+    green: hsl(140, 70%, 65%),
+    yellow: hsl(60, 70%, 65%),
+    primary: hsl(225, 70%, 65%),
+);
+
+$text: (
+    family: #{'Inconsolata',
+    sans-serif},
+    weight: normal,
+    line-height: 1.25,
+    font-size: 16px,
+    size-4xl: 3rem,
+    size-3xl: 2.5rem,
+    size-2xl: 2rem,
+    size-xl: 1.5rem,
+    size-lg: 1.25rem,
+    size-md: 1rem,
+    size-sm: 0.85rem,
+);
+
+$border-radius: (
+    sm: 4px,
+    md: 8px,
+);
+
+$size: (
+    xs: 0.25rem,
+    sm: 0.375rem,
+    md: 0.5rem,
+    lg: 0.75rem,
+    icon: 1.5rem,
+    slider-width: 0.75rem,
+    slider-height: 1.5rem,
+    input: 2.5rem,
+    panel: 20vw,
+    activitybar: 64px,
+    gap: 0.5rem,
+    border: 2px,
+);
+
+$transition: (
+    time: 150ms,
+);
+
+$z-index: (
+    background: -1,
+    preview: 0,
+    panel: 7,
+    menu: 8,
+    activitybar: 9,
+    dialog: 99,
+    snackbar: 999,
+);

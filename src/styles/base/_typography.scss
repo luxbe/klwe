@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+h1,
+.is-size-1 {
+    margin-top: 0;
+    font-size: text(size-4xl);
+}
+
+h2,
+.is-size-2 {
+    font-size: text(size-3xl);
+}
+
+h3,
+.is-size-3 {
+    font-size: text(size-2xl);
+}
+
+h4,
+.is-size-4 {
+    font-size: text(size-xl);
+}
+
+h5,
+.is-size-5 {
+    font-size: text(size-lg);
+}
+
+p,
+.is-size-6 {
+    font-size: text(size-md);
+}
+
+.is-size-7 {
+    font-size: text(size-sm);
+}

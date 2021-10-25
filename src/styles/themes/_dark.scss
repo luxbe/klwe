@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+
+$theme: (
+    body: (
+        background: color(black),
+    ),
+    text: (
+        color: color(white),
+        color--focus: color(primary),
+        color--blur: color(grey-4),
+    ),
+    card: (
+        background: color(grey-6),
+    ),
+    btn: (
+        background: color(grey-6),
+        background--hover: color(grey-7),
+        background--active: color(black),
+    ),
+    option: (
+        background: transparent,
+        background--hover: color(grey-7),
+        background--active: color(grey-6),
+    ),
+    dialog: (
+        background: color(white, 0.25),
+    ),
+    snackbar: (
+        background: color(black),
+        color--info: color(primary),
+        color--success: color(green),
+        color--warning: color(yellow),
+        color--danger: color(red),
+    ),
+    menu: (
+        background: color(black),
+    ),
+    activitybar: (
+        background: color(black),
+    ),
+    panel: (
+        background: color(black),
+    ),
+    border: (
+        color: color(grey-6),
+        color--light: color(white, 0.25),
+        color--focus: color(primary),
+    ),
+    preview: (
+        background: color(grey-7),
+    ),
+    slider: (
+        background: color(grey-6),
+        background-thumb: color(white),
+    ),
+    tree-node: (
+        background: transparent,
+        background--hover: color(grey-7),
+        background--active: color(grey-6),
+    ),
+);

@@ -1,0 +1,87 @@
+@use '@/styles/abstracts' as *;
+
+.input {
+    position: relative;
+    padding: size(md) size(lg);
+    transition: border transition(time);
+    margin-block: size(xs);
+    min-height: size(input);
+
+    &:focus-within {
+        > .input {
+            &__placeholder {
+                font-weight: 600;
+                color: themed(text, color--focus);
+            }
+            &__fieldset {
+                border-color: themed(border, color--focus);
+            }
+        }
+    }
+
+    &.empty:focus-within,
+    &:not(.empty) {
+        .input {
+            &__title {
+                width: revert;
+                padding: 0 size(xs);
+            }
+            &__placeholder {
+                font-size: text(size-sm);
+                top: -#{size(md)};
+            }
+        }
+    }
+
+    &.has-no-title {
+        margin-block-start: 0;
+
+        .input__title {
+            display: none;
+        }
+
+        .input__fieldset {
+            top: 0;
+        }
+    }
+
+    &__title {
+        font-size: text(size-sm);
+        width: 0;
+        padding: 0;
+        visibility: hidden;
+        white-space: nowrap;
+    }
+
+    &__placeholder {
+        position: absolute;
+        top: #{size(md)};
+        left: #{size(lg)};
+        margin: 0;
+        color: themed(text, color--blur);
+        transition: all transition(time);
+        pointer-events: none;
+    }
+
+    &__fieldset {
+        position: absolute;
+        inset: 0;
+        top: -#{size(md)};
+        pointer-events: none;
+        transition: color transition(time);
+        border: size(border) solid themed(border, color);
+        border-radius: border-radius(md);
+        margin: 0;
+        padding: size(sm);
+    }
+
+    &__element {
+        background: none;
+        border: 0;
+        outline: 0;
+        color: inherit;
+        width: 100%;
+        resize: none;
+        margin: 0;
+    }
+}

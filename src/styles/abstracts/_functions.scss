@@ -1,0 +1,33 @@
+@use './variables' as *;
+
+@function color($key, $opacity: 1) {
+    @return rgba(map-get($colors, $key), $opacity);
+}
+
+@function text($key) {
+    @return map-get($text, $key);
+}
+
+@function border-radius($size: md) {
+    @return map-get($border-radius, $size);
+}
+
+@function size($key) {
+    @return map-get($padding, $key);
+}
+
+@function size($key) {
+    @return map-get($size, $key);
+}
+
+@function transition($key) {
+    @return map-get($transition, $key);
+}
+
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}
+
+@function themed($component, $key) {
+    @return var(--#{$component}-#{$key});
+}
