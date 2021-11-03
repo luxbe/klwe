@@ -38,9 +38,10 @@
     }
 
     beforeUpdate(() => {
-        item.paint_color ??= '#FFFFFFFF';
-
         onShapeTypeChange();
+        item.shape_width ??= 20;
+        hasHeight && (item.shape_height ??= 20);
+        item.paint_color ??= '#FFFFFFFF';
     });
 </script>
 
