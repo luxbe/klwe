@@ -166,7 +166,9 @@
     <Input title="Color" class="input--color">
         <div class="color" on:click={() => (open = !open)}>
             <div class="color__label">
-                <InlineInput
+                <input
+                    type="text"
+                    class="input input__element"
                     value={color.substr(1)}
                     on:change={onColorLabelChange}
                 />
@@ -333,6 +335,11 @@
                 content: '#';
                 font-size: text(size-sm);
                 color: themed(text, color--blur);
+            }
+
+            .input {
+                padding: 0;
+                min-height: 1rem;
             }
         }
 
