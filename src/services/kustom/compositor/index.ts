@@ -100,14 +100,14 @@ class Compositor {
                 switch (item.text_size_type) {
                     case 'FIXED_WIDTH': {
                         // TODO: fix family
-                        $textCtx.font = `${item.text_size ?? 20}px Inconsolata`;
+                        $textCtx.font = `${(item.text_size ??= 20)}px Inconsolata`;
 
                         const maxChars = dataService.getMaxChars(item);
                         const lines = dataService.getTextLines(item, maxChars);
 
                         size = {
                             width: item.text_width ?? 20,
-                            height: lines.length * item.text_size ?? 20,
+                            height: lines.length * item.text_size,
                         };
                         break;
                     }
@@ -127,7 +127,7 @@ class Compositor {
                     }
                     default: {
                         // TODO: fix family
-                        $textCtx.font = `${item.text_size ?? 20}px Inconsolata`;
+                        $textCtx.font = `${(item.text_size ??= 20)}px Inconsolata`;
 
                         const lines = item.text_expression.split('\n');
 

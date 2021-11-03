@@ -5,7 +5,6 @@
         background: themed(tree-node, background);
         width: 100%;
         cursor: pointer;
-        border: size(border) solid transparent;
 
         &:hover {
             background: themed(tree-node, background--hover);

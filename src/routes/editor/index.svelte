@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-    <title>KLWE | {$preset.preset_info.title || 'New Project'}</title>
+    <title>{$preset.preset_info.title || 'New Project'}</title>
 </svelte:head>
 <svelte:window
     on:unload={() => kustomStore.preset.store()}
