@@ -1,61 +1,61 @@
 @use '../abstracts' as *;
 
 $theme: (
-    body: (
-        background: color(white),
-    ),
-    text: (
-        color: color(black),
-        color--focus: color(primary),
-        color--blur: color(grey-5),
-    ),
-    card: (
-        background: color(grey-1),
-    ),
-    btn: (
-        background: color(grey-1),
-        background--hover: color(grey-2),
-        background--active: color(white),
-    ),
-    option: (
-        background: transparent,
-        background--hover: color(grey-1),
-        background--active: color(grey-1),
-    ),
-    dialog: (
-        background: color(black, 0.25),
-    ),
-    snackbar: (
-        background: color(white),
-        color--info: color(primary),
-        color--success: color(green),
-        color--warning: color(yellow),
-        color--danger: color(red),
-    ),
-    menu: (
-        background: color(white),
-    ),
-    activitybar: (
-        background: color(white),
-    ),
-    panel: (
-        background: color(white),
-    ),
-    border: (
-        color: color(grey-2),
-        color--light: color(black, 0.25),
-        color--focus: color(primary),
-    ),
-    preview: (
-        background: color(grey-1),
-    ),
-    slider: (
-        background-thumb: color(grey-6),
-        background: color(grey-1),
-    ),
-    tree-node: (
-        background: transparent,
-        background--hover: color(grey-1),
-        background--active: color(grey-2),
-    ),
+  body: (
+    background: color(white),
+  ),
+  text: (
+    color: color(black),
+    color--focus: color(primary),
+    color--blur: color(grey-5),
+  ),
+  card: (
+    background: color(grey-1),
+  ),
+  btn: (
+    background: color(grey-1),
+    background--hover: color(grey-2),
+    background--active: color(white),
+  ),
+  option: (
+    background: transparent,
+    background--hover: color(grey-1),
+    background--active: color(grey-1),
+  ),
+  dialog: (
+    background: color(black, 0.25),
+  ),
+  snackbar: (
+    background: color(white),
+    color--info: color(primary),
+    color--success: color(green),
+    color--warning: color(yellow),
+    color--danger: color(red),
+  ),
+  menu: (
+    background: color(white),
+  ),
+  activitybar: (
+    background: color(white),
+  ),
+  panel: (
+    background: color(white),
+  ),
+  border: (
+    color: color(grey-2),
+    color--light: color(black, 0.25),
+    color--focus: color(primary),
+  ),
+  preview: (
+    background: color(grey-1),
+  ),
+  slider: (
+    background-thumb: color(grey-6),
+    background: color(grey-1),
+  ),
+  tree-node: (
+    background: transparent,
+    background--hover: color(grey-1),
+    background--active: color(grey-2),
+  ),
 );

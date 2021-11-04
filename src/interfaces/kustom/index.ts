@@ -1,91 +1,91 @@
 import { Overlap, Stack } from 'kustom';
 
 export interface Point {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 
 export interface Width {
-    width: number;
+  width: number;
 }
 
 export interface Height {
-    height: number;
+  height: number;
 }
 
 export type Size = Width & Height;
 
 export interface Anchor {
-    h: '' | 'LEFT' | 'RIGHT';
-    v: 'TOP' | 'CENTER' | 'BOTTOM';
+  h: '' | 'LEFT' | 'RIGHT';
+  v: 'TOP' | 'CENTER' | 'BOTTOM';
 }
 
 export interface Offset {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 
 export interface Padding {
-    top: number;
-    right: number;
-    bottom: number;
-    left: number;
+  top: number;
+  right: number;
+  bottom: number;
+  left: number;
 }
 
 export interface Paint {
-    color: string;
+  color: string;
 }
 
 export const KLWE_ATTRIBUTE = Symbol('__klwe');
 
 export interface KLWE {
-    [KLWE_ATTRIBUTE]: {};
+  [KLWE_ATTRIBUTE]: {};
 }
 
 export interface HasPosition {
-    [KLWE_ATTRIBUTE]: {
-        position: Point;
-    };
+  [KLWE_ATTRIBUTE]: {
+    position: Point;
+  };
 }
 
 export interface HasSize {
-    [KLWE_ATTRIBUTE]: {
-        size: Size;
-    };
+  [KLWE_ATTRIBUTE]: {
+    size: Size;
+  };
 }
 
 export interface HasPadding {
-    [KLWE_ATTRIBUTE]: {
-        padding: Padding;
-    };
+  [KLWE_ATTRIBUTE]: {
+    padding: Padding;
+  };
 }
 
 export type HasBox = HasPosition & HasPadding & HasSize;
 
 export interface HasLevel {
-    [KLWE_ATTRIBUTE]: {
-        level: number;
-    };
+  [KLWE_ATTRIBUTE]: {
+    level: number;
+  };
 }
 
 export interface HasParent {
-    [KLWE_ATTRIBUTE]: {
-        parent: Stack | Overlap | undefined;
-    };
+  [KLWE_ATTRIBUTE]: {
+    parent: Stack | Overlap | undefined;
+  };
 }
 
 export interface HasChildren {
-    [KLWE_ATTRIBUTE]: {
-        isOpen: boolean;
-    };
+  [KLWE_ATTRIBUTE]: {
+    isOpen: boolean;
+  };
 }
 
 export type RootTabsType =
-    | 'BACKGROUND'
-    | 'LAYER'
-    | 'POSITION'
-    | 'GLOBALS'
-    | 'SHORTCUTS';
+  | 'BACKGROUND'
+  | 'LAYER'
+  | 'POSITION'
+  | 'GLOBALS'
+  | 'SHORTCUTS';
 
 export type ItemTabsType = 'POSITION' | 'ANIMATION' | 'TOUCH';
 export type PaintTabType = 'PAINT';
@@ -99,8 +99,8 @@ export type OverlapTabsType = 'LAYER' | ItemTabsType;
 export type StackTabsType = 'LAYER' | ItemTabsType;
 
 export type TabsType =
-    | RootTabsType
-    | TextTabsType
-    | ShapeTabsType
-    | OverlapTabsType
-    | StackTabsType;
+  | RootTabsType
+  | TextTabsType
+  | ShapeTabsType
+  | OverlapTabsType
+  | StackTabsType;

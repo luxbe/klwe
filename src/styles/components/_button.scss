@@ -1,70 +1,70 @@
 @use '@/styles/abstracts' as *;
 
 .btn {
-    position: relative;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  background: themed(btn, background);
+  color: inherit;
+  outline: 0;
+  border: 0;
+  padding: size(sm) size(lg);
+  border-radius: border-radius(sm);
+  cursor: pointer;
+  transition: background transition(time);
+
+  &:hover {
+    background: themed(btn, background--hover);
+  }
+
+  &:disabled {
+    color: themed(text, color--blur);
+
+    .icon {
+      fill: themed(text, color--blur);
+    }
+  }
+
+  &.is-transparent {
+    background: transparent;
+  }
+
+  &:not(.is-icon) .icon {
+    margin-right: size(gap);
+  }
+
+  &.is-icon {
+    padding: size(sm);
+    justify-content: center;
+
+    &:disabled svg {
+      fill: themed(text, color--blur);
+    }
+
+    &.is-lg {
+      padding: size(lg);
+    }
+  }
+
+  &.is-group {
     display: inline-flex;
+    gap: size(gap);
     align-items: center;
-    justify-content: start;
+    border-radius: border-radius(md);
+    padding: size(xs);
     background: themed(btn, background);
-    color: inherit;
-    outline: 0;
-    border: 0;
-    padding: size(sm) size(lg);
-    border-radius: border-radius(sm);
-    cursor: pointer;
-    transition: background transition(time);
+    width: 100%;
+    justify-content: stretch;
 
-    &:hover {
-        background: themed(btn, background--hover);
+    .btn {
+      flex: auto;
+      justify-content: center;
     }
 
-    &:disabled {
-        color: themed(text, color--blur);
-
-        .icon {
-            fill: themed(text, color--blur);
-        }
+    .active {
+      background: themed(btn, background--active);
+      font-weight: 600;
     }
-
-    &.is-transparent {
-        background: transparent;
-    }
-
-    &:not(.is-icon) .icon {
-        margin-right: size(gap);
-    }
-
-    &.is-icon {
-        padding: size(sm);
-        justify-content: center;
-
-        &:disabled svg {
-            fill: themed(text, color--blur);
-        }
-
-        &.is-lg {
-            padding: size(lg);
-        }
-    }
-
-    &.is-group {
-        display: inline-flex;
-        gap: size(gap);
-        align-items: center;
-        border-radius: border-radius(md);
-        padding: size(xs);
-        background: themed(btn, background);
-        width: 100%;
-        justify-content: stretch;
-
-        .btn {
-            flex: auto;
-            justify-content: center;
-        }
-
-        .active {
-            background: themed(btn, background--active);
-            font-weight: 600;
-        }
-    }
+  }
 }

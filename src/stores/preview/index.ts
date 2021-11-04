@@ -1,17 +1,17 @@
 import { get, writable } from 'svelte/store';
 
 class PreviewStore {
-    ctx = writable<CanvasRenderingContext2D>();
+  ctx = writable<CanvasRenderingContext2D>();
 
-    get $ctx() {
-        return get(this.ctx);
-    }
+  get $ctx() {
+    return get(this.ctx);
+  }
 
-    textCtx = writable<CanvasRenderingContext2D>();
+  textCtx = writable<CanvasRenderingContext2D>();
 
-    get $textCtx() {
-        return get(this.textCtx);
-    }
+  get $textCtx() {
+    return get(this.textCtx);
+  }
 }
 
 export const previewStore = new PreviewStore();

@@ -6,27 +6,27 @@ import { activityStore } from '@/stores';
  * @jest-environment jsdom
  */
 describe('Activitybar', () => {
-    let renderedComponent: RenderResult;
+  let renderedComponent: RenderResult;
 
-    beforeAll(() => {
-        activityStore.activity.set('INFO');
-    });
+  beforeAll(() => {
+    activityStore.activity.set('INFO');
+  });
 
-    beforeEach(() => {
-        renderedComponent = render(Activitybar);
-    });
+  beforeEach(() => {
+    renderedComponent = render(Activitybar);
+  });
 
-    it('should show all buttons', () => {
-        const buttons = renderedComponent.container.querySelectorAll('button');
-        expect(buttons.length).toBe(3);
-    });
+  it('should show all buttons', () => {
+    const buttons = renderedComponent.container.querySelectorAll('button');
+    expect(buttons.length).toBe(3);
+  });
 
-    it('should show the correct button as active', () => {
-        const activeButtons = renderedComponent.container.querySelectorAll(
-            'button.active',
-        );
+  it('should show the correct button as active', () => {
+    const activeButtons = renderedComponent.container.querySelectorAll(
+      'button.active',
+    );
 
-        expect(activeButtons.length).toBe(1);
-        expect(activeButtons[0].getAttribute('aria-label')).toBe('INFO');
-    });
+    expect(activeButtons.length).toBe(1);
+    expect(activeButtons[0].getAttribute('aria-label')).toBe('INFO');
+  });
 });

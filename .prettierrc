@@ -1,8 +1,8 @@
 {
-    "useTabs": false,
-    "tabWidth": 4,
-    "endOfLine": "auto",
-    "singleQuote": true,
-    "trailingComma": "all",
-    "svelteSortOrder": "scripts-options-markup-styles"
+  "useTabs": false,
+  "tabWidth": 2,
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "svelteSortOrder": "scripts-options-markup-styles"
 }

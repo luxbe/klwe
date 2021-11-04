@@ -4,26 +4,26 @@
 @use './styles/components';
 
 * {
-    box-sizing: border-box;
-    font-family: text(family);
-    font-size: text(font-size);
-    font-weight: text(weight);
-    line-height: text(line-height);
+  box-sizing: border-box;
+  font-family: text(family);
+  font-size: text(font-size);
+  font-weight: text(weight);
+  line-height: text(line-height);
 }
 
 #app {
-    @include themify($themes);
+  @include themify($themes);
 
-    background: themed(body, background);
-    color: themed(text, color);
+  background: themed(body, background);
+  color: themed(text, color);
 }
 
 html,
 body,
 #app {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }

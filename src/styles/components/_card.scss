@@ -2,21 +2,21 @@
 @use '@/styles/base/typography' as *;
 
 .card {
-    background: themed(card, background);
-    color: inherit;
-    padding: size(lg);
-    border-radius: border-radius(md);
+  background: themed(card, background);
+  color: inherit;
+  padding: size(lg);
+  border-radius: border-radius(md);
 
-    &__title {
-        @extend .is-size-3;
-        margin: size(lg);
-        text-align: center;
-    }
+  &__title {
+    @extend .is-size-3;
+    margin: size(lg);
+    text-align: center;
+  }
 
-    &__actions {
-        display: flex;
-        justify-content: end;
+  &__actions {
+    display: flex;
+    justify-content: end;
 
-        color: color(primary);
-    }
+    color: color(primary);
+  }
 }

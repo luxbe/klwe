@@ -1,36 +1,36 @@
 @use '@/styles/abstracts' as *;
 
 .tree {
-    &__node {
-        background: themed(tree-node, background);
-        width: 100%;
-        cursor: pointer;
+  &__node {
+    background: themed(tree-node, background);
+    width: 100%;
+    cursor: pointer;
 
-        &:hover {
-            background: themed(tree-node, background--hover);
-        }
-
-        &.active {
-            background: themed(tree-node, background--active);
-        }
-
-        .btn {
-            padding: 0;
-            position: absolute;
-            left: 0;
-        }
-
-        .icon {
-            padding: 0;
-        }
+    &:hover {
+      background: themed(tree-node, background--hover);
     }
+
+    &.active {
+      background: themed(tree-node, background--active);
+    }
+
+    .btn {
+      padding: 0;
+      position: absolute;
+      left: 0;
+    }
+
+    .icon {
+      padding: 0;
+    }
+  }
 }
 
 .node__info {
-    display: flex;
-    align-items: center;
-    gap: size(gap);
-    position: relative;
-    margin-left: size(sm);
-    padding-left: size(icon) + size(xs);
+  display: flex;
+  align-items: center;
+  gap: size(gap);
+  position: relative;
+  margin-left: size(sm);
+  padding-left: size(icon) + size(xs);
 }
