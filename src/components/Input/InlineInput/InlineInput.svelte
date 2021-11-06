@@ -14,10 +14,10 @@
   function onKeydown(
     e: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement },
   ) {
-    if (e.key === 'Tab' || e.key === 'Escape') {
+    if (e.key === 'Escape') {
       value = originalValue;
       e.currentTarget.blur();
-    } else if (e.key === 'Enter') e.currentTarget.blur();
+    } else if (e.key === 'Tab' || e.key === 'Enter') e.currentTarget.blur();
   }
 
   function onChange() {
