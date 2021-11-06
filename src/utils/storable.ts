@@ -4,7 +4,7 @@ export function storable<T>(
   key: string,
   value?: T,
   defaultValue?: T,
-): Writable<T> & { store(): void; load(): T } {
+): Writable<T> & { store(): void; load(): T; clear(): void } {
   const raw = writable<T>(value);
   const { set, update, subscribe } = raw;
 
@@ -20,6 +20,9 @@ export function storable<T>(
       const valueRaw = localStorage.getItem(key);
       const value = valueRaw ? JSON.parse(valueRaw) : defaultValue;
       return value;
+    },
+    clear() {
+      localStorage.removeItem(key);
     },
   };
 }

@@ -31,6 +31,10 @@ class KustomStore {
 
     return res;
   });
+
+  get $flatItems() {
+    return get(this.flatItems);
+  }
 }
 
 export const kustomStore = new KustomStore();

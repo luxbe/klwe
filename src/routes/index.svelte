@@ -15,7 +15,8 @@
   let fileInputEl: HTMLInputElement, fileReader: FileReader;
 
   function onCreateNewClick() {
-    kustomStore.preset.set(DEFAULT_PRESET);
+    kustomService.clearPreset();
+    kustomService.initPreset(DEFAULT_PRESET);
     goto('/editor');
   }
 
