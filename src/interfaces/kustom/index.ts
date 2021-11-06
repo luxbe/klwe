@@ -1,4 +1,4 @@
-import { Overlap, Stack } from 'kustom';
+import { Item, Overlap, Stack } from 'kustom';
 
 export interface Point {
   x: number;
@@ -70,14 +70,15 @@ export interface HasLevel {
 
 export interface HasParent {
   [KLWE_ATTRIBUTE]: {
-    parent: Stack | Overlap | undefined;
+    parent?: Stack | Overlap;
   };
 }
 
 export interface HasChildren {
   [KLWE_ATTRIBUTE]: {
-    isOpen: boolean;
+    isOpen?: boolean;
   };
+  viewgroup_items: (Item & HasParent)[];
 }
 
 export type RootTabsType =
