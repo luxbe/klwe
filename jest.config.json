@@ -1,7 +1,7 @@
 {
   "transform": {
     "^.+\\.svelte$": [
-      "./node_modules/svelte-jester/dist/transformer.mjs",
+      "svelte-jester",
       {
         "preprocess": true
       }

@@ -9,7 +9,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "npx prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.json",
+    "test": "jest --config jest.config.json",
     "test:watch": "npm run test -- --watch",
     "prepare": "husky install"
   },
